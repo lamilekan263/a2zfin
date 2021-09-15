@@ -2,7 +2,7 @@ import React from "react";
 
 // reactstrap components
 
-import { Card, CardBody, CardTitle, Button, Badge, Row, Col } from "reactstrap";
+import { Card, div, CardTitle, Button, Badge, Row, Col } from "reactstrap";
 
 function Portfolio() {
   return (
@@ -21,11 +21,9 @@ function Portfolio() {
           <Row>
             <Col sm="12" md="4">
               <Card>
-                <CardBody className="m-4">
-                  <CardTitle tag="h6" className="text-muted">
-                    Total Balance
-                  </CardTitle>
-                  <h3 className="title">$0.00</h3>
+                <div className="m-4">
+                  <p className="text-muted">Total Balance</p>
+                  <h5 className="title">$0.00</h5>
                   <div className="mb-2">
                     <img
                       src="https://apy.plasma.finance/static/media/eth-black.24d4fc53.svg"
@@ -35,17 +33,15 @@ function Portfolio() {
                     />
                     <span>0</span>
                   </div>
-                  <Badge className="px-3 py-2 bg-dark">0 Assets</Badge>
-                </CardBody>
+                  <Badge className="px-3 py-2 bg-secondary">0 Assets</Badge>
+                </div>
               </Card>
             </Col>
             <Col sm="12" md="4">
               <Card>
-                <CardBody className="m-4">
-                  <CardTitle tag="h6" className="text-muted">
-                    Savings
-                  </CardTitle>
-                  <h3 className="title">$0.00</h3>
+                <div className="m-4">
+                  <p className="text-muted">Savings</p>
+                  <h5 className="title">$0.00</h5>
                   <div className="mb-2">
                     <img
                       src="https://apy.plasma.finance/static/media/eth-black.24d4fc53.svg"
@@ -56,17 +52,15 @@ function Portfolio() {
                     <span>0</span>
                   </div>
 
-                  <Badge className="px-3 py-2 bg-dark">0 Savings</Badge>
-                </CardBody>
+                  <Badge className="px-3 py-2 bg-secondary">0 Savings</Badge>
+                </div>
               </Card>
             </Col>
             <Col sm="12" md="4">
               <Card>
-                <CardBody className="m-4">
-                  <CardTitle tag="h6" className="text-muted">
-                    Liquidity Pool
-                  </CardTitle>
-                  <h3 className="title">$0.00</h3>
+                <div className="m-4">
+                  <p className="text-muted">Liquidity Pool</p>
+                  <h5 className="title">$0.00</h5>
                   <div className="mb-2">
                     <img
                       src="https://apy.plasma.finance/static/media/eth-black.24d4fc53.svg"
@@ -76,71 +70,68 @@ function Portfolio() {
                     />
                     <span>0</span>
                   </div>
-                  <Badge className="px-3 py-2 bg-dark">0 Pools</Badge>
-                </CardBody>
+                  <Badge className="px-3 py-2 bg-secondary">0 Pools</Badge>
+                </div>
               </Card>
             </Col>
             <Col sm="12">
               <Card>
-                <CardBody className="m-4">
+                <div className="m-4">
                   <CardTitle tag="h6">Wallet</CardTitle>
-                  <Row>
-                    <Col className="align-self-center">
-                      <p>
-                        You don't have any assets yet. Do you want to buy one?
-                      </p>
 
-                      <Button
-                        className="px-3 py-2"
-                        style={{ backgroundColor: "black" }}
-                      >
-                        Buy Assets
-                      </Button>
-                    </Col>
-                  </Row>
-                </CardBody>
+                  <div className="d-flex flex-column align-items-center justify-content-center">
+                    <p>
+                      You don't have any assets yet. Do you want to buy one?
+                    </p>
+
+                    <Button
+                      className="px-3 py-2"
+                      style={{ backgroundColor: "black" }}
+                    >
+                      Buy Assets
+                    </Button>
+                  </div>
+                </div>
               </Card>
             </Col>
             <Col sm="12">
               <Card>
-                <CardBody className="m-4">
+                <div className="m-4">
                   <CardTitle tag="h6">Savings</CardTitle>
-                  <Row>
-                    <Col className="align-self-center">
-                      <p>
-                        You don’t have any savings yet. Do you want to make one?
-                      </p>
 
-                      <Button
-                        className="px-3 py-2"
-                        style={{ backgroundColor: "black" }}
-                      >
-                        Make a Deposit
-                      </Button>
-                    </Col>
-                  </Row>
-                </CardBody>
+                  <div className="d-flex flex-column align-items-center justify-content-center">
+                    <p>
+                      You don’t have any savings yet. Do you want to make one?
+                    </p>
+
+                    <Button
+                      className="px-3 py-2"
+                      style={{ backgroundColor: "black" }}
+                    >
+                      Make a Deposit
+                    </Button>
+                  </div>
+                </div>
               </Card>
             </Col>
             <Col sm="12">
               <Card>
-                <CardBody className="m-4">
+                <div className="m-4">
                   <CardTitle tag="h6">Liquidity</CardTitle>
-                  <Row>
-                    <Col className="align-self-center">
-                      <p>
-                        You don’t have liquidity yet. Do you want to make one?
-                      </p>
 
-                      <Button
-                        className="px-3 py-2"
-                        style={{ backgroundColor: "black" }}
-                      >
-                        Create Liquidity
-                      </Button>
-                    </Col>
-                  </Row>
-                </CardBody>
+                  <div className="d-flex flex-column align-items-center justify-content-center">
+                    <p>
+                      You don’t have liquidity yet. Do you want to make one?
+                    </p>
+
+                    <Button
+                      className="px-3 py-2"
+                      style={{ backgroundColor: "black" }}
+                    >
+                      Create Liquidity
+                    </Button>
+                  </div>
+                </div>
               </Card>
             </Col>
           </Row>
