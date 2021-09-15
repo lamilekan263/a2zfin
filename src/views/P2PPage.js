@@ -4,11 +4,11 @@ import React from "react";
 import { Row, Col } from "reactstrap";
 // core components
 
-function Market() {
+function P2PPage() {
   return (
     <>
       <div className="content">
-        <h1>Market</h1>
+        <h1>P2P Lend/borrow</h1>
 
         <Row>
           <Col></Col>
@@ -18,4 +18,4 @@ function Market() {
   );
 }
 
-export default Market;
+export default P2PPage;

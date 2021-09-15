@@ -1,18 +1,17 @@
-import Market from "views/Market.js";
-import LiquidityPool from "views/LiquidityPool.js";
+import P2PPage from "views/P2PPage.js";
+import PoolsPage from "views/PoolsPage.js";
 import Portfolio from "views/Portfolio.js";
-import SpaceportPage from "views/SpaceportPage.js";
-import LaunchPodsPage from "views/LaunchPodsPage.js";
+
 import Swap from "views/Swap.js";
 import Savings from "views/Savings.js";
 import InnovationHubPage from "views/InnovationHubPage.js";
 
 var routes = [
   {
-    path: "/market",
-    name: "Market",
+    path: "/p2p",
+    name: "P2PPage",
     icon: "nc-icon nc-bank",
-    component: Market,
+    component: P2PPage,
     layout: "/a",
   },
   {
@@ -30,10 +29,10 @@ var routes = [
     layout: "/a",
   },
   {
-    path: "/liquidity-Pool",
-    name: "Liquidity Pools",
+    path: "/Pools",
+    name: "Pools",
     icon: "nc-icon nc-bell-55",
-    component: LiquidityPool,
+    component: PoolsPage,
     layout: "/a",
   },
   {
@@ -43,20 +42,7 @@ var routes = [
     component: Savings,
     layout: "/a",
   },
-  {
-    path: "/launchpods",
-    name: "Launchpods",
-    icon: "nc-icon nc-tile-56",
-    component: LaunchPodsPage,
-    layout: "/a",
-  },
-  {
-    path: "/spaceport-ido",
-    name: "Spaceport IDO",
-    icon: "nc-icon nc-caps-small",
-    component: SpaceportPage,
-    layout: "/a",
-  },
+
   {
     path: "/innovation-Hub",
     name: "Innovation Hub",
