@@ -2,17 +2,7 @@ import React from "react";
 
 // reactstrap components
 
-import {
-  Card,
-  CardText,
-  CardSubtitle,
-  CardBody,
-  CardTitle,
-  Button,
-  Badge,
-  Row,
-  Col,
-} from "reactstrap";
+import { Card, CardBody, CardTitle, Button, Badge, Row, Col } from "reactstrap";
 
 function Icons() {
   return (
