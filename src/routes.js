@@ -1,11 +1,11 @@
 import Market from "views/Market.js";
 import LiquidityPool from "views/LiquidityPool.js";
 import Portfolio from "views/Portfolio.js";
-import Typography from "views/Typography.js";
-import TableList from "views/Tables.js";
+import SpaceportPage from "views/SpaceportPage.js";
+import LaunchPodsPage from "views/LaunchPodsPage.js";
 import Swap from "views/Swap.js";
-import UserPage from "views/User.js";
-import UpgradeToPro from "views/Upgrade.js";
+import Savings from "views/Savings.js";
+import InnovationHubPage from "views/InnovationHubPage.js";
 
 var routes = [
   {
@@ -37,32 +37,31 @@ var routes = [
     layout: "/admin",
   },
   {
-    path: "/user-page",
+    path: "/savings",
     name: "Savings",
     icon: "nc-icon nc-single-02",
-    component: UserPage,
+    component: Savings,
     layout: "/admin",
   },
   {
-    path: "/tables",
+    path: "/launchpods",
     name: "Launchpods",
     icon: "nc-icon nc-tile-56",
-    component: TableList,
+    component: LaunchPodsPage,
     layout: "/admin",
   },
   {
-    path: "/typography",
+    path: "/spaceport-ido",
     name: "Spaceport IDO",
     icon: "nc-icon nc-caps-small",
-    component: Typography,
+    component: SpaceportPage,
     layout: "/admin",
   },
   {
-    pro: true,
-    path: "/upgrade",
+    path: "/innovation-Hub",
     name: "Innovation Hub",
     icon: "nc-icon nc-spaceship",
-    component: UpgradeToPro,
+    component: InnovationHubPage,
     layout: "/admin",
   },
 ];

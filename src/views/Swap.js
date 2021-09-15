@@ -11,7 +11,7 @@ import {
   Col,
 } from "reactstrap";
 
-function Map() {
+function Swap() {
   return (
     <>
       <div className="content">
@@ -141,4 +141,4 @@ function Map() {
   );
 }
 
-export default Map;
+export default Swap;

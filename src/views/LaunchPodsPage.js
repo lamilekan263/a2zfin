@@ -1,13 +1,13 @@
 import React from "react";
 
-function LiquidityPool() {
+function LaunchPodsPage() {
   return (
     <>
       <div className="content">
-        <h1>Liquidity pool</h1>
+        <h1>LaunchPodsPage</h1>
       </div>
     </>
   );
 }
 
-export default LiquidityPool;
+export default LaunchPodsPage;

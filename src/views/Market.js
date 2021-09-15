@@ -4,7 +4,7 @@ import React from "react";
 import { Row, Col } from "reactstrap";
 // core components
 
-function Dashboard() {
+function Market() {
   return (
     <>
       <div className="content">
@@ -18,4 +18,4 @@ function Dashboard() {
   );
 }
 
-export default Dashboard;
+export default Market;

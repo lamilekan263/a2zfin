@@ -4,7 +4,7 @@ import React from "react";
 
 import { Card, CardBody, CardTitle, Button, Badge, Row, Col } from "reactstrap";
 
-function Icons() {
+function Portfolio() {
   return (
     <>
       <div className="content">
@@ -150,4 +150,4 @@ function Icons() {
   );
 }
 
-export default Icons;
+export default Portfolio;
