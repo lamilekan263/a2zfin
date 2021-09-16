@@ -85,8 +85,8 @@ function Portfolio() {
                     </p>
 
                     <Button
-                      className="px-3 py-2"
-                      style={{ backgroundColor: "black" }}
+                      className="px-3 py-2 btn-primary"
+                      
                     >
                       Buy Assets
                     </Button>
@@ -104,10 +104,7 @@ function Portfolio() {
                       You don’t have any savings yet. Do you want to make one?
                     </p>
 
-                    <Button
-                      className="px-3 py-2"
-                      style={{ backgroundColor: "black" }}
-                    >
+                    <Button className="px-3 py-2 btn-primary">
                       Make a Deposit
                     </Button>
                   </div>
@@ -124,10 +121,7 @@ function Portfolio() {
                       You don’t have liquidity yet. Do you want to make one?
                     </p>
 
-                    <Button
-                      className="px-3 py-2"
-                      style={{ backgroundColor: "black" }}
-                    >
+                    <Button className="px-3 py-2 btn-primary">
                       Create Liquidity
                     </Button>
                   </div>
