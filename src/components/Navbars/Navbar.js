@@ -52,16 +52,16 @@ function Header(props) {
     sidebarToggle.current.classList.toggle("toggled");
   };
   // function that adds color dark/transparent to the navbar on resize (this is for the collapse)
-  const updateColor = () => {
-    if (window.innerWidth < 993 && isOpen) {
-      setColor("dark");
-    } else {
-      setColor("transparent");
-    }
-  };
-  React.useEffect(() => {
-    window.addEventListener("resize", updateColor.bind(this));
-  });
+  // const updateColor = () => {
+  //   if (window.innerWidth < 993 && isOpen) {
+  //     setColor("dark");
+  //   } else {
+  //     setColor("transparent");
+  //   }
+  // };
+  // React.useEffect(() => {
+  //   window.addEventListener("resize", updateColor.bind(this));
+  // });
   React.useEffect(() => {
     if (
       window.innerWidth < 993 &&
