@@ -23,15 +23,15 @@ import {
 function Header(props) {
   const [isOpen, setIsOpen] = React.useState(false);
   const [dropdownOpen, setDropdownOpen] = React.useState(false);
-  const [color, setColor] = React.useState("transparent");
+  const [color] = React.useState("transparent");
   const sidebarToggle = React.useRef();
   const location = useLocation();
   const toggle = () => {
-    if (isOpen) {
-      setColor("transparent");
-    } else {
-      setColor("dark");
-    }
+    // if (isOpen) {
+    //   setColor("transparent");
+    // } else {
+    //   setColor("dark");
+    // }
     setIsOpen(!isOpen);
   };
   const dropdownToggle = (e) => {
