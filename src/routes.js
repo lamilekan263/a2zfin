@@ -9,7 +9,7 @@ import InnovationHubPage from "views/InnovationHubPage.js";
 var routes = [
   {
     path: "/p2p",
-    name: "P2PPage",
+    name: "P2P Lend/Borrow",
     icon: "nc-icon nc-bank",
     component: P2PPage,
     layout: "/a",
@@ -30,7 +30,7 @@ var routes = [
   },
   {
     path: "/Pools",
-    name: "Pools",
+    name: "Lend/Borrow Pools",
     icon: "nc-icon nc-bell-55",
     component: PoolsPage,
     layout: "/a",

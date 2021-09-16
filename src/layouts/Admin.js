@@ -3,7 +3,7 @@ import React from "react";
 import PerfectScrollbar from "perfect-scrollbar";
 import { Route, Switch, useLocation } from "react-router-dom";
 
-import DemoNavbar from "components/Navbars/DemoNavbar.js";
+import DemoNavbar from "components/Navbars/Navbar.js";
 import Footer from "components/Footer/Footer.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
 
@@ -12,7 +12,7 @@ import routes from "routes.js";
 var ps;
 
 function Dashboard(props) {
-  const [backgroundColor] = React.useState("green");
+  const [backgroundColor] = React.useState("0B013D");
   const [activeColor] = React.useState("info");
   const mainPanel = React.useRef();
   const location = useLocation();

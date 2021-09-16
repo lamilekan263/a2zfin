@@ -30,7 +30,7 @@ function Sidebar(props) {
   return (
     <div
       className="sidebar"
-      data-color={props.bgColor}
+      data-color={"white"}
       data-active-color={props.activeColor}
     >
       <div className="logo">
@@ -50,7 +50,7 @@ function Sidebar(props) {
         </a>
       </div>
       {/* <div>
-        <h2 style={{color: "white"}}>connect Wallet</h2>
+        <p style={{color: "white"}}>connect Wallet</p>
       </div> */}
       <div className="sidebar-wrapper" ref={sidebar}>
         <Nav>
