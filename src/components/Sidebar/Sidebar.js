@@ -58,7 +58,9 @@ function Sidebar(props) {
               >
                 {prop.isExternal ? (
                   <a href={prop.path} className="nav-link">
-                    <i className={prop.icon} />
+                    <i>
+                      <ion-icon className="nc-icon" name={prop.icon}></ion-icon>
+                    </i>
                     <p>{prop.name}</p>
                   </a>
                 ) : (
@@ -67,7 +69,9 @@ function Sidebar(props) {
                     className="nav-link"
                     activeClassName="active"
                   >
-                    <i className={prop.icon} />
+                    <i>
+                      <ion-icon className="nc-icon" name={prop.icon}></ion-icon>
+                    </i>
                     <p>{prop.name}</p>
                   </NavLink>
                 )}

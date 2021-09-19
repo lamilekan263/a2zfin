@@ -1,13 +1,13 @@
 import React from "react";
 
-function InnovationHubPage() {
+function BridgePage() {
   return (
     <>
       <div className="content">
-        <h1>InnovationHubPage</h1>
+        <h1>BridgePage</h1>
       </div>
     </>
   );
 }
 
-export default InnovationHubPage;
+export default BridgePage;
