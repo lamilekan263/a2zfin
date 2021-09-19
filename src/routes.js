@@ -1,4 +1,4 @@
-import P2PPage from "views/P2PPage.js";
+//import P2PPage from "views/P2PPage.js";
 import PoolsPage from "views/PoolsPage.js";
 import Portfolio from "views/Portfolio.js";
 
@@ -8,11 +8,10 @@ import InnovationHubPage from "views/InnovationHubPage.js";
 
 var routes = [
   {
-    path: "/p2p",
+    path: "https://a2zfindev.netlify.app/",
     name: "P2P Lend/Borrow",
     icon: "nc-icon nc-bank",
-    component: P2PPage,
-    layout: "/a",
+    isExternal: true,
   },
   {
     path: "/portfolio",

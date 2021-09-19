@@ -56,14 +56,21 @@ function Sidebar(props) {
                 }
                 key={key}
               >
-                <NavLink
-                  to={prop.layout + prop.path}
-                  className="nav-link"
-                  activeClassName="active"
-                >
-                  <i className={prop.icon} />
-                  <p>{prop.name}</p>
-                </NavLink>
+                {prop.isExternal ? (
+                  <a href={prop.path} className="nav-link">
+                    <i className={prop.icon} />
+                    <p>{prop.name}</p>
+                  </a>
+                ) : (
+                  <NavLink
+                    to={prop.layout + prop.path}
+                    className="nav-link"
+                    activeClassName="active"
+                  >
+                    <i className={prop.icon} />
+                    <p>{prop.name}</p>
+                  </NavLink>
+                )}
               </li>
             );
           })}
