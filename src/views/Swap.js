@@ -1,147 +1,383 @@
-import React from "react";
+import React, { useState } from "react";
 // reactstrap components
-import { Card, CardHeader, CardBody, Badge, Row, Col } from "reactstrap";
+import classnames from "classnames";
+import {
+  TabContent,
+  TabPane,
+  Nav,
+  NavItem,
+  NavLink,
+  Card,
+  CardHeader,
+  CardBody,
+  Row,
+  Col,
+} from "reactstrap";
 
 function Swap() {
+  const [activeTab, setActiveTab] = useState("1");
+
+  const toggle = (tab) => {
+    if (activeTab !== tab) setActiveTab(tab);
+  };
   return (
     <>
       <div className="content">
-        <h1>Swap</h1>
         <Row>
           <Col sm="12" md="8 mx-auto">
-            <Card>
+            <Card >
               <CardHeader>
-                <div className="d-flex justify-content-between">
-                  <div>
-                    <p className="font-weight-bold">A2ZFIN</p>
-                    <span className="mt-n5 text-muted">
-                      best_rates_on_dex_market
-                    </span>
-                  </div>
-                  <div>
-                    <Badge disabled color="light" className="ml-2 ">
-                      <ion-icon
-                        name="reload-outline"
-                        style={{ height: "25px", width: "30px" }}
-                      ></ion-icon>
-                    </Badge>
-
-                    <Badge color="light" className="ml-2 ">
-                      <ion-icon
-                        name="options-outline"
-                        style={{ height: "25px", width: "30px" }}
-                      ></ion-icon>
-                    </Badge>
-                  </div>
-                </div>
+                <Nav tabs>
+                  <NavItem>
+                    <NavLink
+                      className={classnames({ active: activeTab === "1" })}
+                      onClick={() => {
+                        toggle("1");
+                      }}
+                    >
+                      Market
+                    </NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink
+                      className={classnames({ active: activeTab === "2" })}
+                      onClick={() => {
+                        toggle("2");
+                      }}
+                    >
+                      Limits
+                    </NavLink>
+                  </NavItem>
+                </Nav>
               </CardHeader>
               <CardBody className="my-1">
-                <form>
-                  <div className="mb-3 form-field">
-                    <div className="field-label">
-                      <span>Sell</span>
-                    </div>
-                    <div className="input-panel border p-2">
-                      <div className="label-row">
-                        <label
-                          htmlFor="exampleInputEmail1"
-                          className="form-label"
-                        >
-                          -$
-                        </label>
-                      </div>
-
-                      {/* end */}
-                      <div
-                        className="input-row h-50 d-flex justify-content-center align-items-center"
-                        style={{ height: "200px" }}
-                      >
-                        <input
-                          type="email"
-                          className="form-control "
-                          id="exampleInputEmail1"
-                          aria-describedby="emailHelp"
-                        />
-
-                        <div className="border">
-                           <Badge
-                            color="light"
-                            className="d-flex justify-content-center align-items-center  px-3"
-                          >
-                            <div
-                              className="token-logo"
-                              style={{ height: "25px", width: "30px" }}
+                <TabContent activeTab={activeTab}>
+                  {/* market tab pane */}
+                  <TabPane tabId="1">
+                    <form className="auth-register-form mt-2" action>
+                      <label className="custom-label">You pay</label>
+                      <div className="form_style">
+                        <div className="my-form">
+                          <div className="form-group input_first adjust">
+                            <label
+                              className="form-label "
+                              htmlFor="register-username"
                             >
-                              <img
-                                src={
-                                  require("assets/currencies/eth.png").default
-                                }
-                                alt="eth"
-                                className="h-100 w-100"
-                              />
-                            </div>
-                            <span>ETH</span>
-                          </Badge>
+                              Wrapper Ether
+                            </label>
+                            <select
+                              className="form-control my-select"
+                              placeholder="currency"
+                              tabIndex={6}
+                              required
+                            >
+                              <option value="BNB">BNB</option>
+                              <option value="ETH">ETH</option>
+                              <option value="BTC">BTC</option>
+                            </select>
+                          </div>
+                          <div className="form-group step">
+                            <label
+                              className="form-label "
+                              htmlFor="register-username"
+                            >
+                              $123
+                            </label>
+                            <input
+                              className="form-control"
+                              id="register-username"
+                              type="text"
+                              name="register-username"
+                              placeholder={1}
+                              aria-describedby="register-username"
+                              autofocus
+                              tabIndex={1}
+                              dir="rtl"
+                            />
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  {/* buy */}
-                  <div className="mb-3 form-field">
-                    <div className="field-label">
-                      <span>Buy</span>
-                    </div>
-                    <div className="input-panel border p-2">
-                      <div className="label-row">
-                        <label
-                          htmlFor="exampleInputEmail1"
-                          className="form-label"
-                        >
-                          -$
-                        </label>
+                      <div className="exchange">
+                        <i className="fas fa-exchange-alt" />
                       </div>
-
-                      {/* end */}
-                      <div
-                        className="input-row h-50 d-flex justify-content-center align-items-center"
-                        style={{ height: "200px" }}
-                      >
-                        <input
-                          type="email"
-                          className="form-control "
-                          id="exampleInputEmail1"
-                          aria-describedby="emailHelp"
-                        />
-
-                        <div className="border">
-                          <Badge
-                            color="light"
-                            className="d-flex justify-content-center align-items-center  px-3"
-                          >
-                            <div
-                              className="token-logo"
-                              style={{ height: "25px", width: "30px" }}
+                      <label className="custom-label adjust">You receive</label>
+                      <div className="form_style">
+                        <div className="my-form">
+                          <div className="form-group input_first">
+                            <label
+                              className="form-label "
+                              htmlFor="register-username"
                             >
-                              <img
-                                src={
-                                  require("assets/currencies/plasma.svg")
-                                    .default
-                                }
-                                alt="eth"
-                                className="h-100 w-100"
-                              />
-                            </div>
-                            <span>PPAY</span>
-                          </Badge>
+                              Wrapper Ether
+                            </label>
+                            <select
+                              className="form-control my-select"
+                              placeholder="currency"
+                              tabIndex={6}
+                              required
+                            >
+                              <option value="BNB">DAI</option>
+                              <option value="ETH">ETH</option>
+                              <option value="BTC">BTC</option>
+                              <option value="BTC">BNB</option>
+                            </select>
+                          </div>
+                          <div className="form-group step">
+                            <label
+                              className="form-label "
+                              htmlFor="register-username"
+                            >
+                              $3428534
+                            </label>
+                            <input
+                              className="form-control"
+                              id="register-username"
+                              type="text"
+                              name="register-username"
+                              placeholder={2345}
+                              aria-describedby="register-username"
+                              autofocus
+                              tabIndex={1}
+                              dir="rtl"
+                            />
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-
-                  <button type="submit" className="btn btn-primary w-100">
-                    connect wallet
-                  </button>
-                </form>
+                      <div className="text-des">
+                        <label
+                          className="form-label "
+                          htmlFor="register-username"
+                        >
+                          1 WETH cost
+                        </label>
+                        <label
+                          className="form-label "
+                          htmlFor="register-username"
+                        >
+                          0.2 DA
+                        </label>
+                      </div>
+                      <div className="text-des">
+                        <label
+                          className="form-label "
+                          htmlFor="register-username"
+                        >
+                          1 DAI cost
+                        </label>
+                        <label
+                          className="form-label "
+                          htmlFor="register-username"
+                        >
+                          5 WETH
+                        </label>
+                      </div>
+                      <button
+                        className="btn btn-primary btn-block my-btt"
+                        tabIndex={5}
+                      >
+                        Connect Wallet
+                      </button>
+                    </form>
+                  </TabPane>
+                  {/* limit tab pane */}
+                  <TabPane tabId="2">
+                    <form className="auth-register-form mt-2" action>
+                      <label className="custom-label">You pay</label>
+                      <div className="form_style">
+                        <div className="my-form">
+                          <div className="form-group input_first">
+                            <label
+                              className="form-label "
+                              htmlFor="register-username"
+                            >
+                              Wrapper Ether
+                            </label>
+                            <select
+                              className="form-control my-select"
+                              placeholder="currency"
+                              tabIndex={6}
+                              required
+                            >
+                              <option value="BNB">BNB</option>
+                              <option value="ETH">ETH</option>
+                              <option value="BTC">BTC</option>
+                            </select>
+                          </div>
+                          <div className="form-group step">
+                            <label
+                              className="form-label "
+                              htmlFor="register-username"
+                            >
+                              $123
+                            </label>
+                            <input
+                              className="form-control"
+                              id="register-username"
+                              type="text"
+                              name="register-username"
+                              placeholder={1}
+                              aria-describedby="register-username"
+                              autofocus
+                              tabIndex={1}
+                              dir="rtl"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="form-contain">
+                        <div className="form-group form-group002">
+                          <div className="price-label">
+                            <label
+                              className="form-label"
+                              htmlFor="register-username"
+                            >
+                              Price
+                            </label>
+                            <label
+                              className="form-label"
+                              htmlFor="register-username"
+                            >
+                              Lock
+                            </label>
+                          </div>
+                          <div className="form-group form-group2">
+                            <input
+                              className="form-control price-box"
+                              id="register-username"
+                              type="text"
+                              name="register-username"
+                              placeholder={492}
+                              aria-describedby="register-username"
+                              autofocus
+                              tabIndex={1}
+                            />
+                          </div>
+                        </div>
+                        <div className="form-group form-group001">
+                          <label
+                            className="form-label "
+                            htmlFor="register-number"
+                          >
+                            Expires in
+                          </label>
+                          <div className="form-group form-group3">
+                            <select
+                              className="form-control my-select1"
+                              placeholder="currency"
+                              tabIndex={6}
+                              required
+                            >
+                              <option value="BNB">1Day</option>
+                              <option value="ETH">5Days</option>
+                              <option value="ETH">7Days</option>
+                              <option value="ETH">20Days</option>
+                              <option value="ETH">1Month</option>
+                              <option value="ETH">2Months</option>
+                              <option value="ETH">2Months</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="exchange">
+                        <i className="fas fa-exchange-alt" />
+                      </div>
+                      <label className="custom-label">You receive</label>
+                      <div className="form_style">
+                        <div className="my-form">
+                          <div className="form-group input_first">
+                            <label
+                              className="form-label "
+                              htmlFor="register-username"
+                            >
+                              Wrapper Ether
+                            </label>
+                            <select
+                              className="form-control my-select"
+                              placeholder="currency"
+                              tabIndex={6}
+                              required
+                            >
+                              <option value="BNB">DAI</option>
+                              <option value="ETH">ETH</option>
+                              <option value="BTC">BTC</option>
+                              <option value="BTC">BNB</option>
+                            </select>
+                          </div>
+                          <div className="form-group step">
+                            <label
+                              className="form-label "
+                              htmlFor="register-username"
+                            >
+                              $3428534
+                            </label>
+                            <input
+                              className="form-control"
+                              id="register-username"
+                              type="text"
+                              name="register-username"
+                              placeholder={2345}
+                              aria-describedby="register-username"
+                              autofocus
+                              tabIndex={1}
+                              dir="rtl"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="text-des">
+                        <label
+                          className="form-label "
+                          htmlFor="register-username"
+                        >
+                          1 WETH cost
+                        </label>
+                        <label
+                          className="form-label "
+                          htmlFor="register-username"
+                        >
+                          <span className="span001">~$2,845</span>
+                          2,848.5330767 DAI
+                        </label>
+                      </div>
+                      <div className="text-des">
+                        <label
+                          className="form-label "
+                          htmlFor="register-username"
+                        >
+                          1 DAI cost
+                        </label>
+                        <label
+                          className="form-label "
+                          htmlFor="register-username"
+                        >
+                          <span className="span001">~$1</span>
+                          0.0003514 ETH
+                        </label>
+                      </div>
+                      <div className="text-des">
+                        <label
+                          className="form-label "
+                          htmlFor="register-username"
+                        >
+                          Transaction Cost
+                        </label>
+                        <label
+                          className="form-label "
+                          htmlFor="register-username"
+                        >
+                          <span className="span001">~ $43.43</span>
+                          0.0152 Ξ
+                        </label>
+                      </div>
+                      <button
+                        className="btn btn-primary btn-block my-btt"
+                        tabIndex={5}
+                      >
+                        Connect Wallet
+                      </button>
+                    </form>
+                  </TabPane>
+                </TabContent>
               </CardBody>
             </Card>
           </Col>

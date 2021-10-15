@@ -21,10 +21,11 @@ var routes = [
     layout: "/a",
   },
   {
-    path: "https://a2zfindev.netlify.app/",
+    path: "/swap",
     name: "Swap",
     icon: "swap-vertical-outline",
-    isExternal: true,
+    component: Swap,
+    layout: "/a",
   },
   {
     path: "/Pools",
