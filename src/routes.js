@@ -8,7 +8,7 @@ import BridgePage from "views/BridgePage.js";
 
 var routes = [
   {
-    path: "https://a2zfindev.netlify.app/",
+    path: "https://a2zdv.netlify.app/",
     name: "P2P Lend/Borrow",
     icon: "people-outline",
     isExternal: true,
