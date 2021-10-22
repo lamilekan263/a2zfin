@@ -2,7 +2,7 @@ import React from "react";
 
 // reactstrap components
 
-import { Card, div, CardTitle, Button, Badge, Row, Col } from "reactstrap";
+import { Card,  CardTitle, Button, Badge, Row, Col } from "reactstrap";
 
 function Portfolio() {
   return (
